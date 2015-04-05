@@ -33,9 +33,15 @@
 
         });
 
+        window.addEventListener("batterystatus", onBatteryStatus, false);
+
+        function onBatteryStatus(info) {
+            // Handle the online event
+            append("Level: " + info.level + " isPlugged: " + info.isPlugged);
+        }
     </script>
 </head>
 <body>
-
+    <h1>Battery Status</h1>
 </body>
 </html>
